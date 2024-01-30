@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Text, View} from 'react-native';
 
-const HomeScreen = () => {
+import {HomeScreenProps} from './types';
+
+const HomeScreen = (props: HomeScreenProps) => {
   return (
     <View>
       <Text>Home</Text>
