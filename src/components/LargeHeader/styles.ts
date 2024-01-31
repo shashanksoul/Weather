@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     color: 'black',
     fontFamily: 'nothing-dot',
+    marginLeft: -15,
   },
 });
 

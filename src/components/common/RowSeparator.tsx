@@ -13,7 +13,6 @@ const defaultStyle = StyleSheet.create({
   separatorStyle: {
     flex: 1,
     height: 1,
-    marginHorizontal: 16,
     marginVertical: 20,
     backgroundColor: 'grey',
   },

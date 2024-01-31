@@ -15,30 +15,15 @@ import {style} from './styles';
 const DATA = [
   {
     title: 'UNITS',
-    data: ['Pizza', 'Burger', 'Risotto', 'Pasta', 'Lasagna'],
+    data: ['CELSIUS', 'FAHRENHEIT'],
   },
   {
     title: 'WIND SPEED',
-    data: [
-      'French Fries',
-      'Onion Rings',
-      'Fried Shrimps',
-      'Mozzarella Sticks',
-      'Garlic Bread',
-    ],
+    data: ['KM/H', 'MPH', 'M/S'],
   },
   {
     title: 'ABOUT',
-    data: [
-      'Water',
-      'Coke',
-      'Beer',
-      'Wine',
-      'Mojito',
-      'Cuba Libre',
-      'Pina Colada',
-      'Margarita',
-    ],
+    data: ['TERMS OF SERVICE', 'PRIVACY POLICY'],
   },
 ];
 
@@ -59,8 +44,8 @@ const SettingsScreen = () => {
   const renderItem: SectionListRenderItem<string> = useCallback(({item}) => {
     return (
       <View style={{width: '100%'}}>
-        <Text style={{fontSize: 30}}>
-          {item}. Scroll to see header animation
+        <Text style={{fontSize: 30,fontFamily:'SpaceMono-Regular'}}>
+          {item}
         </Text>
       </View>
     );
@@ -77,7 +62,7 @@ const SettingsScreen = () => {
         section.title !== DATA[DATA.length - 1].title ? <RowSeparator /> : null
       }
       renderSectionHeader={({section: {title}}) => (
-        <Text style={{fontSize: 20}}>{title}</Text>
+        <Text style={{fontSize: 20, fontFamily:'SpaceMono-Regular'}}>{title}</Text>
       )}
       keyExtractor={(_, i) => `text-row-${i}`}
     />
