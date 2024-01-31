@@ -5,18 +5,20 @@ import {
   ScrollLargeHeaderProps,
   SectionListWithHeaders,
 } from '@codeherence/react-native-header';
+import RowSeparator from '@components/common/RowSeparator';
 import CustomHeaderComponent from '@components/CustomHeader';
 import LargeHeaderComponent from '@components/LargeHeader';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import { style } from './styles';
+
+import {style} from './styles';
 
 const DATA = [
   {
-    title: 'Main dishes',
+    title: 'UNITS',
     data: ['Pizza', 'Burger', 'Risotto', 'Pasta', 'Lasagna'],
   },
   {
-    title: 'Sides',
+    title: 'WIND SPEED',
     data: [
       'French Fries',
       'Onion Rings',
@@ -26,7 +28,7 @@ const DATA = [
     ],
   },
   {
-    title: 'Drinks',
+    title: 'ABOUT',
     data: [
       'Water',
       'Coke',
@@ -36,17 +38,6 @@ const DATA = [
       'Cuba Libre',
       'Pina Colada',
       'Margarita',
-    ],
-  },
-  {
-    title: 'Desserts',
-    data: [
-      'Cheese Cake',
-      'Ice Cream',
-      'Chocolate Cake',
-      'Tiramisu',
-      'Panna Cotta',
-      'Profiteroles',
     ],
   },
 ];
@@ -82,6 +73,9 @@ const SettingsScreen = () => {
       sections={DATA}
       style={style.sectionList}
       renderItem={renderItem}
+      renderSectionFooter={({section}) =>
+        section.title !== DATA[DATA.length - 1].title ? <RowSeparator /> : null
+      }
       renderSectionHeader={({section: {title}}) => (
         <Text style={{fontSize: 20}}>{title}</Text>
       )}
