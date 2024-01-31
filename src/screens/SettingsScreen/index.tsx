@@ -8,6 +8,7 @@ import {
 import CustomHeaderComponent from '@components/CustomHeader';
 import LargeHeaderComponent from '@components/LargeHeader';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import { style } from './styles';
 
 const DATA = [
   {
@@ -79,6 +80,7 @@ const SettingsScreen = () => {
       LargeHeaderComponent={renderLargeHeader}
       contentContainerStyle={{paddingBottom: bottom}}
       sections={DATA}
+      style={style.sectionList}
       renderItem={renderItem}
       renderSectionHeader={({section: {title}}) => (
         <Text style={{fontSize: 20}}>{title}</Text>
