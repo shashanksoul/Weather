@@ -1,26 +1,42 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {StyleSheet, Text} from 'react-native';
 
 import {
-  FadingView,
   Header,
   ScrollHeaderProps,
   SurfaceComponentProps,
 } from '@codeherence/react-native-header';
 import {useNavigation} from '@react-navigation/native';
+import Animated, {
+  interpolateColor,
+  useAnimatedStyle,
+  useDerivedValue,
+} from 'react-native-reanimated';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import styles from './styles';
 
-const SURFACE_BG_COLOR = '#D7D9D8';
+const SURFACE_BG_COLOR = 'white';
 
 //To show custom color when user scrolls screen
-const HeaderSurface: React.FC<SurfaceComponentProps> = ({showNavBar}) => (
-  <FadingView
-    opacity={showNavBar}
-    style={[StyleSheet.absoluteFillObject, {backgroundColor: SURFACE_BG_COLOR}]}
-  />
-);
+const HeaderSurface: React.FC<SurfaceComponentProps> = ({showNavBar}) => {
+  const bgColor = useDerivedValue(() => {
+    return interpolateColor(
+      showNavBar.value,
+      [0, 1],
+      ['#D7D9D8', SURFACE_BG_COLOR],
+    );
+  });
+
+  const animatedStyle = useAnimatedStyle(() => {
+    return {
+      backgroundColor: bgColor.value,
+    };
+  });
+  return (
+    <Animated.View style={[StyleSheet.absoluteFillObject, animatedStyle]} />
+  );
+};
 
 const CustomHeaderComponent: React.FC<ScrollHeaderProps> = ({showNavBar}) => {
   const navigation = useNavigation();
