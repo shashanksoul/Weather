@@ -16,7 +16,7 @@ const RadioButton: React.FC<RadioButtonProps> = ({
     <TouchableOpacity
       onPress={onSelect}
       style={style.radioButton}
-      activeOpacity={1}>
+      activeOpacity={0.6}>
       <Text style={style.titleStyle}>{label}</Text>
       {selected && (
         <View style={style.selectedOuterCircle}>
