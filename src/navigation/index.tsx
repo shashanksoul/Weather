@@ -13,14 +13,18 @@ const RootNavigation = () => (
   <>
     <Stack.Navigator
       screenOptions={{headerTitleAlign: 'center'}}
-      initialRouteName="Settings">
+      initialRouteName="Home">
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen
         name="Settings"
         component={SettingsScreen}
-        options={{headerShown: false}}
+        options={{headerShown: false, animation: 'slide_from_right'}}
       />
-      <Stack.Screen name="Locations" component={LocationsScreen} />
+      <Stack.Screen
+        name="Locations"
+        component={LocationsScreen}
+        options={{animation: 'slide_from_left'}}
+      />
     </Stack.Navigator>
   </>
 );
