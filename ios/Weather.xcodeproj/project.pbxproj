@@ -14,6 +14,11 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-Weather-WeatherTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Weather-WeatherTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		D8FDA469E17D4DDB92145973 /* nothing-dot.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D000A47BCE8246FB9943831F /* nothing-dot.ttf */; };
+		FAC9CBB07F7C45979087BAD8 /* SpaceMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91A2B000C53A4ADAAFF96C87 /* SpaceMono-Bold.ttf */; };
+		2A3E545219434CEE9C24A7B1 /* SpaceMono-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD9CE7E256804EE1A3CAF22D /* SpaceMono-BoldItalic.ttf */; };
+		A53878EFB8BD4085B76A1F88 /* SpaceMono-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F5D74F875994B8A873A959A /* SpaceMono-Italic.ttf */; };
+		ED5C4FACE49F4722A4873665 /* SpaceMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB3DA00AA4824848E2F26 /* SpaceMono-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Weather/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Weather-WeatherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-WeatherTests.release.xcconfig"; path = "Target Support Files/Pods-Weather-WeatherTests/Pods-Weather-WeatherTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		D000A47BCE8246FB9943831F /* nothing-dot.ttf */ = {isa = PBXFileReference; name = "nothing-dot.ttf"; path = "../src/assets/fonts/nothing-dot.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		91A2B000C53A4ADAAFF96C87 /* SpaceMono-Bold.ttf */ = {isa = PBXFileReference; name = "SpaceMono-Bold.ttf"; path = "../src/assets/fonts/SpaceMono-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DD9CE7E256804EE1A3CAF22D /* SpaceMono-BoldItalic.ttf */ = {isa = PBXFileReference; name = "SpaceMono-BoldItalic.ttf"; path = "../src/assets/fonts/SpaceMono-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6F5D74F875994B8A873A959A /* SpaceMono-Italic.ttf */ = {isa = PBXFileReference; name = "SpaceMono-Italic.ttf"; path = "../src/assets/fonts/SpaceMono-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		77DDB3DA00AA4824848E2F26 /* SpaceMono-Regular.ttf */ = {isa = PBXFileReference; name = "SpaceMono-Regular.ttf"; path = "../src/assets/fonts/SpaceMono-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +132,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				8CF90658A0A74106AC263E94 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +158,19 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		8CF90658A0A74106AC263E94 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				D000A47BCE8246FB9943831F /* nothing-dot.ttf */,
+				91A2B000C53A4ADAAFF96C87 /* SpaceMono-Bold.ttf */,
+				DD9CE7E256804EE1A3CAF22D /* SpaceMono-BoldItalic.ttf */,
+				6F5D74F875994B8A873A959A /* SpaceMono-Italic.ttf */,
+				77DDB3DA00AA4824848E2F26 /* SpaceMono-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -243,6 +267,11 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				D8FDA469E17D4DDB92145973 /* nothing-dot.ttf in Resources */,
+				FAC9CBB07F7C45979087BAD8 /* SpaceMono-Bold.ttf in Resources */,
+				2A3E545219434CEE9C24A7B1 /* SpaceMono-BoldItalic.ttf in Resources */,
+				A53878EFB8BD4085B76A1F88 /* SpaceMono-Italic.ttf in Resources */,
+				ED5C4FACE49F4722A4873665 /* SpaceMono-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

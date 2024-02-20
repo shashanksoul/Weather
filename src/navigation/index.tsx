@@ -15,8 +15,16 @@ const RootNavigation = () => (
       screenOptions={{headerTitleAlign: 'center'}}
       initialRouteName="Home">
       <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Settings" component={SettingsScreen} />
-      <Stack.Screen name="Locations" component={LocationsScreen} />
+      <Stack.Screen
+        name="Settings"
+        component={SettingsScreen}
+        options={{headerShown: false, animation: 'slide_from_right'}}
+      />
+      <Stack.Screen
+        name="Locations"
+        component={LocationsScreen}
+        options={{animation: 'slide_from_left'}}
+      />
     </Stack.Navigator>
   </>
 );
