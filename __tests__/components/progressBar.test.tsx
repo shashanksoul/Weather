@@ -6,10 +6,6 @@ import {act} from 'react-test-renderer';
 
 jest.useFakeTimers();
 
-// const setState = jest.fn().mockImplementation(() => 2);
-
-// jest.spyOn(React, 'useState').mockImplementation(() => [1, setState]);
-
 describe('progressbar component', () => {
   test('render', () => {
     const progressBar = render(<ProgressBar />);
