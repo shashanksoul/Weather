@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OvalInfo Component render 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "white",
+      "borderRadius": 40,
+      "margin": 15,
+      "padding": 20,
+      "paddingLeft": 30,
+      "width": "100%",
+    }
+  }
+  testID="oval-view"
+>
+  <Text
+    style={
+      {
+        "color": "black",
+        "fontFamily": "SpaceMono-Bold",
+        "fontSize": 16,
+      }
+    }
+    testID="heading-text"
+  >
+    THIS IS HEADING
+  </Text>
+  <Text
+    style={
+      {
+        "color": "black",
+        "fontSize": 14,
+      }
+    }
+    testID="subHeading-text"
+  >
+    This is subHeading
+  </Text>
+</View>
+`;
