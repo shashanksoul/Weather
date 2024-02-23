@@ -1,24 +1,28 @@
 import {StyleSheet} from 'react-native';
 
+import {SCREEN_WIDTH} from 'src/utils/Dimensions';
+
 const style = StyleSheet.create({
   container: {
-    padding: 20,
+    padding: 16,
     backgroundColor: 'white',
-    borderRadius: 40,
+    borderRadius: SCREEN_WIDTH / 2,
     width: '100%',
-    margin: 15,
-    paddingLeft: 30,
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    margin: 10,
+    paddingHorizontal: 20,
   },
   dangerBg: {
     backgroundColor: 'red',
   },
   heading: {
     fontFamily: 'SpaceMono-Bold',
-    fontSize: 16,
+    fontSize: 14,
     color: 'black',
   },
   subHeading: {
-    fontSize: 14,
+    fontSize: 13,
     color: 'black',
   },
 });

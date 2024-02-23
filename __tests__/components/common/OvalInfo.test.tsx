@@ -1,6 +1,6 @@
 import React from 'react';
 
-import OvalInfo from '@components/OvalInfo';
+import OvalInfo from '@components/common/OvalInfo';
 import {render} from '@testing-library/react-native';
 
 const mockHeading = 'This is Heading';
