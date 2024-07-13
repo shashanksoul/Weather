@@ -1,5 +1,5 @@
 import React, {useCallback, useState} from 'react';
-import {SectionListRenderItem, Text, View} from 'react-native';
+import {SectionListRenderItem, Text} from 'react-native';
 
 import {
   ScrollLargeHeaderProps,
@@ -7,7 +7,6 @@ import {
 } from '@codeherence/react-native-header';
 import RenderAboutItem from '@components/AboutItem';
 import RadioButton from '@components/common/RadioButton';
-import RadioRow from '@components/common/RadioRow';
 import RowSeparator from '@components/common/RowSeparator';
 import CustomHeaderComponent from '@components/CustomHeader';
 import LargeHeaderComponent from '@components/LargeHeader';
@@ -15,11 +14,7 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import {style} from './styles';
 
-const renderRadioItem: SectionListRenderItem<string> = ({
-  item,
-  isSelected,
-  onPress,
-}) => {
+const renderRadioItem = ({item, isSelected, onPress}) => {
   return <RadioButton label={item} selected={isSelected} onSelect={onPress} />;
 };
 
@@ -43,10 +38,13 @@ const DATA = [
 
 const SettingsScreen = () => {
   const {bottom} = useSafeAreaInsets();
-  const [selectedRadio, setSelectedRadio] = useState({
+  const initialSelectedRadioButtons = {
     UNITS: 0,
     'WIND SPEED': 0,
-  });
+  };
+  const [selectedRadio, setSelectedRadio] = useState(
+    initialSelectedRadioButtons,
+  );
 
   const renderLargeHeader = useCallback(
     (largeHeaderProps: ScrollLargeHeaderProps) => (
@@ -59,7 +57,10 @@ const SettingsScreen = () => {
     [],
   );
 
-  const handleRadioPress = (sectionIndex, itemIndex) => {
+  const handleRadioPress = (
+    sectionIndex: keyof typeof initialSelectedRadioButtons,
+    itemIndex: number,
+  ) => {
     const newSelectedRadio = {...selectedRadio};
     newSelectedRadio[sectionIndex] = itemIndex;
     setSelectedRadio(newSelectedRadio);
